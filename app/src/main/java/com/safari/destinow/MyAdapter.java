@@ -1,4 +1,4 @@
-package com.safari.sukabumiexplore;
+package com.safari.destinow;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
+import com.safari.destinow.R;
+
 import java.util.ArrayList;
 import java.util.List;
 import androidx.annotation.NonNull;
@@ -30,9 +32,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Glide.with(context).load(dataList.get(position).getDataGambar()).into(holder.recImage);
         holder.txtjudulItem.setText(dataList.get(position).getDataJudul());
-        holder.txtentangItem.setText(dataList.get(position).getDataTentang());
-        holder.txtlokasiItem.setText(dataList.get(position).getDataLokasi());
-        holder.txthargaItem.setText(dataList.get(position).getDatadataHarga());
         holder.recCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,11 +39,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
                 intent.putExtra("Gambar", dataList.get(holder.getAdapterPosition()).getDataGambar());
                 intent.putExtra("Judul", dataList.get(holder.getAdapterPosition()).getDataJudul());
                 intent.putExtra("Deskripsi", dataList.get(holder.getAdapterPosition()).getDataDeskripsi());
-                intent.putExtra("JamBuka", dataList.get(holder.getAdapterPosition()).getDataJambuka());
                 intent.putExtra("Lokasi", dataList.get(holder.getAdapterPosition()).getDataLokasi());
-                intent.putExtra("Harga", dataList.get(holder.getAdapterPosition()).getDatadataHarga());
-                intent.putExtra("LinkMaps", dataList.get(holder.getAdapterPosition()).getDataLinkMaps());
-                intent.putExtra("Tentang",dataList.get(holder.getAdapterPosition()).getDataTentang());
+
                 intent.putExtra("Key",dataList.get(holder.getAdapterPosition()).getKey());
                 context.startActivity(intent);
             }
@@ -61,15 +57,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 }
 class MyViewHolder extends RecyclerView.ViewHolder{
     ImageView recImage;
-    TextView txtjudulItem, txtentangItem, txtlokasiItem, txthargaItem;
+    TextView txtjudulItem ;
     CardView recCard;
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
         recImage = itemView.findViewById(R.id.recImage);
         recCard = itemView.findViewById(R.id.recCard);
         txtjudulItem = itemView.findViewById(R.id.judulItem);
-        txtentangItem = itemView.findViewById(R.id.tentangItem);
-        txtlokasiItem = itemView.findViewById(R.id.lokasiItem);
-        txthargaItem = itemView.findViewById(R.id.hargaItem);
+
     }
 }

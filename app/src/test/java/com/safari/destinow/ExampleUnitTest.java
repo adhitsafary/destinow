@@ -1,4 +1,4 @@
-package com.safari.sukabumiexplore;
+package com.safari.destinow;
 
 import org.junit.Test;
 

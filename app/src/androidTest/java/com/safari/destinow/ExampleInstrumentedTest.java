@@ -1,4 +1,4 @@
-package com.safari.sukabumiexplore;
+package com.safari.destinow;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.safari.sukabumiexplore", appContext.getPackageName());
+        assertEquals("com.safari.destinow", appContext.getPackageName());
     }
 }

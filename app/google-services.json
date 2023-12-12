@@ -1,95 +1,26 @@
 {
   "project_info": {
-    "project_number": "753647101409",
-    "firebase_url": "https://sukabumiexplore-ff5de-default-rtdb.firebaseio.com",
-    "project_id": "sukabumiexplore-ff5de",
-    "storage_bucket": "sukabumiexplore-ff5de.appspot.com"
+    "project_number": "392283155172",
+    "project_id": "denow-dd9e6",
+    "storage_bucket": "denow-dd9e6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:753647101409:android:5a09779cff4d8be3231ea0",
+        "mobilesdk_app_id": "1:392283155172:android:ce646ac1758d78c38ddaf1",
         "android_client_info": {
-          "package_name": "com.safari.crudwithimage"
+          "package_name": "com.safari.destinow"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "753647101409-ct5offplpidsc42uf0or9qa1pkjvcs3e.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBAzs0IwtNn-NsCTNShj-4852Mh9ydjYiw"
+          "current_key": "AIzaSyBNbBA_ITvE_CLyAPHYDN_s9PAKPYjXnKU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "753647101409-ct5offplpidsc42uf0or9qa1pkjvcs3e.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:753647101409:android:b7bbf15e03fc6433231ea0",
-        "android_client_info": {
-          "package_name": "com.safari.sukabumiexplore"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "753647101409-ct5offplpidsc42uf0or9qa1pkjvcs3e.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBAzs0IwtNn-NsCTNShj-4852Mh9ydjYiw"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "753647101409-ct5offplpidsc42uf0or9qa1pkjvcs3e.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:753647101409:android:f6ee2f7801600bf4231ea0",
-        "android_client_info": {
-          "package_name": "com.safari.sukabumiexplorer"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "753647101409-ct5offplpidsc42uf0or9qa1pkjvcs3e.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBAzs0IwtNn-NsCTNShj-4852Mh9ydjYiw"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "753647101409-ct5offplpidsc42uf0or9qa1pkjvcs3e.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

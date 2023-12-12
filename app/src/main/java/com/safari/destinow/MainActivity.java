@@ -1,20 +1,23 @@
-package com.safari.sukabumiexplore;
+package com.safari.destinow;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.content.Intent;
+
 import android.os.Bundle;
-import android.view.View;
+import android.widget.TextView;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,15 +28,16 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     List<DataClass> dataList;
     MyAdapter adapter;
-    SearchView searchView;
+    TextView txtnamaUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
         recyclerView = findViewById(R.id.recyclerView);
-        fab = findViewById(R.id.fab);
-        searchView = findViewById(R.id.search);
-        searchView.clearFocus();
+        txtnamaUser = findViewById(R.id.namaUser);
+
+
         GridLayoutManager gridLayoutManager = new GridLayoutManager(MainActivity.this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -63,24 +67,11 @@ public class MainActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                searchList(newText);
-                return true;
-            }
-        });
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, UploadActivity.class);
-                startActivity(intent);
-            }
-        });
+
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        String email = currentFirebaseUser.getEmail();
+        txtnamaUser.setText(email);
+
     }
     public void searchList(String text){
         ArrayList<DataClass> searchList = new ArrayList<>();
